@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 16px;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #2b2118;
+  background: #f4ecde;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+  color: #4a2f1b;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fffaf0;
+  box-shadow: 0 6px 20px rgba(74, 47, 27, 0.18);
+}
+
+th {
+  background: #4a2f1b;
+  color: #f4ecde;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(74, 47, 27, 0.15);
+}
+
+/* Row backgrounds */
+tr[class="read"] {
+  background-image: linear-gradient(90deg, #e3f4e1, #fffaf0);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(90deg, #fde4e1, #fffaf0);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(90deg, #fff1cf, #fffaf0);
+}
+
+span {
+  display: inline-block;
+}
+
+/* Status badges */
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid #c0504d;
+  background-image: linear-gradient(135deg, #f8b4aa, #e57f78);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid #3b8b4a;
+  background-image: linear-gradient(135deg, #b5e3b9, #6fbf7b);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid #d99a1c;
+  background-image: linear-gradient(135deg, #ffe39a, #f3b93f);
+}
+
+span[class="status"],
+span[class^="rate"] {
+  height: 30px;
+  width: 104px;
+  padding: 3px;
+}
+
+span[class="status"] {
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+/* Rating circles */
+span[class^="rate"] > span {
+  border: 2px solid #b8860b;
+  border-radius: 50%;
+  margin: 2px 3px;
+  height: 18px;
+  width: 18px;
+  background-color: #fffaf0;
+}
+
+span[class~="one"] > span:first-of-type {
+  background-image: linear-gradient(135deg, #ffe680, #e0a800);
+}
+
+span[class~="two"] > span:nth-of-type(-n + 2) {
+  background-image: linear-gradient(135deg, #ffe680, #e0a800);
+}
+
+span[class~="three"] > span {
+  background-image: linear-gradient(135deg, #ffe680, #e0a800);
+}
